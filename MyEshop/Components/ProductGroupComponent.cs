@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MyEshop.Models;
 
 namespace MyEshop.Components
 {
@@ -18,7 +19,15 @@ namespace MyEshop.Components
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            return View("/Views/Components/ProductGroupCompnents.cshtml",_context.Categories.ToList());
+            var Categories = _context.Categories
+                .Select(r => new ShowProductCountViewModel()
+                {
+                    CategoryId = r.Id,
+                    CategoryName = r.Name,
+                    ProductCount = _context.CategoryToProducts.Count(p => p.CategoryId == r.Id)
+                }).ToList();
+
+            return View("/Views/Components/ProductGroupCompnents.cshtml", Categories);
         }
     }
 }

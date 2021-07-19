@@ -148,3 +148,5 @@ C:\Users\reza\source\repos\MyEshop\MyEshop\obj\Debug\net5.0\MyEshop.csproj.Assem
 C:\Users\reza\source\repos\MyEshop\MyEshop\obj\Debug\net5.0\Razor\Views\Home\Detail.cshtml.g.cs
 C:\Users\reza\source\repos\MyEshop\MyEshop\obj\Debug\net5.0\Razor\Views\Home\ShowCart.cshtml.g.cs
 C:\Users\reza\source\repos\MyEshop\MyEshop\obj\Debug\net5.0\Razor\Views\Components\ProductGroupCompnents.cshtml.g.cs
+C:\Users\reza\source\repos\MyEshop\MyEshop\obj\Debug\net5.0\Razor\Views\Product\ShowProductByCategoryId.cshtml.g.cs
+C:\Users\reza\source\repos\MyEshop\MyEshop\obj\Debug\net5.0\Razor\Views\Shared\_ProductBox.cshtml.g.cs

@@ -1,0 +1,21 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "_ProductBox";
+}
+
+
+<div class="col-4">
+    <div class="card">
+        <img src="~/images/@(Model.Id).jpg" class="card-img-top img-thumbnail" width="200" height="200" />
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <a asp-action="Detail"
+               asp-controller="Home"
+               asp-route-id="@Model.Id"
+               class="btn btn-outline-info">جزئیات محصول</a>
+        </div>
+    </div>
+</div>
+
+
+
