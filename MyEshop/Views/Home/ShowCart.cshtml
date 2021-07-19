@@ -1,0 +1,29 @@
+﻿@model CartViewModel
+@{
+    ViewData["Title"] = "سبد خرید";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>کالا </th>
+            <th>تعداد</th>
+            <th>قیمت</th>
+            <th>حذف از سبد خرید</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.CartItems)
+            {
+                <tr class="table-light">
+                    <td>@item.Item.Product.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.getTotalPrice()</td>
+                    <td><a asp-action="RemoveCart"
+                           asp-route-itemId="@item.Item.Id"
+                           class="btn btn-outline-danger">حذف</a></td>
+                </tr>
+            }
+    </tbody>
+</table>
+<h5>جمع کل سبد خرید : @Model.OrderTotal</h5>
